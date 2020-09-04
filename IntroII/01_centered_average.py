@@ -16,11 +16,37 @@
 # max = 100
 # min = 1
 
+# DEVISE A PLAN
+# 1. Get the smallest number from the list
+# 2. Get the largest number from the list
+# 3. Sum up the list
+# 4. Subtract the smallest and largest number
+# 5. Floor divide the sum by the length of the list
+
+# EXECUTE THE PLAN
+def centered_avg1(ints):
+    # 1. Get the smallest number from the list
+    smallest = min(ints)
+    # 2. Get the largest number from the list
+    largest = max(ints)
+    # 3. Sum up the list
+    sum = 0
+    # 3.5 Iterate over the data
+    for num in ints:
+        sum += num
+        # 4. Subtract the smallest and largest number
+    sum -= smallest
+    sum -= largest
+    # 5. Floor divide the sum by the length of the list
+    final_number = sum // (len(ints) - 2)
+    return final_number
+
+
 
 # testing
 
 numbers = [1, 2, 3, 4, 100]
-# print(centered_avg1(numbers))
+print(centered_avg1(numbers))
 import time
 
 start = time.time()
